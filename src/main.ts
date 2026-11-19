@@ -1,0 +1,1 @@
+let x: (string | number | string[])[] = ["mostafa", "test", "mahmoud", "dsjklf", 433, 3, ["dlkfjsd"]]
