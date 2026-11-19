@@ -1,1 +1,13 @@
-let x: (string | number | string[])[] = ["mostafa", "test", "mahmoud", "dsjklf", 433, 3, ["dlkfjsd"]]
+// crate arr in TSC  as type string 
+let arr: string[] = ["hello", "world"]
+// create array with multi types 
+let arr2: (string | number)[] = ["mostafa", "mohamed", 29, 44]
+// array in array with multi types 
+let arr3: (string | number | (string | boolean | number)[])[] = ["hello ", "test", 20, ["mostafa", "tests", true, 3]]
+// tuple == > like array 
+let x: [string, number] = ["mostafa", 34]
+
+let arr4: readonly number[] = [10, 30, 40]
+// arr4.push(30) == error
+// readonly  i can't change anything from array when i put it  (readonly)
+console.log(arr4);
