@@ -87,4 +87,27 @@ class CalcShort {
         return this.num1 + this.num2 + this.age;
     }
 }
+//Encapsulation
+class BankAccount {
+    // cannot access balance from any place just from this class only
+    balance;
+    constructor(balance) {
+        this.balance = balance;
+    }
+    deposit(value) {
+        this.balance = +value;
+    }
+    // getter 
+    getBalance() {
+        return this.balance;
+    }
+    // setter // we can set data from getter or constructor 
+    setBalance(balance) {
+        this.balance = balance;
+    }
+}
+let bank = new BankAccount(100);
+// in bank i can not access balance > it's private var
+// just i can access it using getter and setter functions 
+console.log(bank.getBalance());
 export {};

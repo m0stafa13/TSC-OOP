@@ -116,3 +116,27 @@ class CalcShort implements ICalc {
         return this.num1 + this.num2 + this.age
     }
 }
+//Encapsulation
+class BankAccount {
+    // cannot access balance from any place just from this class only
+    private balance: number
+    constructor(balance: number) {
+        this.balance = balance
+    }
+    public deposit(value: number): void {
+        this.balance = +value
+    }
+    // getter 
+    getBalance() {
+        return this.balance
+    }
+    // setter // we can set data from getter or constructor 
+    setBalance(balance: number) {
+        this.balance = balance
+    }
+}
+let bank = new BankAccount(100)
+// in bank i can not access balance > it's private var
+// just i can access it using getter and setter functions 
+
+console.log(bank.getBalance());
