@@ -37,8 +37,54 @@ function sum2({ n1, n2, n3 }) {
     return n1 + n2 + n3;
 }
 let res = sum2({ n1: 2, n2: 2, n3: 2 });
-export {};
 // return  void ==> void we put it when the function has end of logic  like function print thing tho something , function to sum two nums , function crate some thing and end then return back to the line that makes call to this function
 // return never ==> function return never cannot have a returnable end point (has no end point ) server fun, wile(true) {} , in js we have throw Error is function return never =>it dose not stop when you throw Error the server will stop if you did not  handle it
 // return void > function has end point and return (undefined)
-// return never > function has no end pint it will working all times 
+// return never > function has no end pint it will working all times  
+//!class
+class Sum {
+    num1;
+    num2;
+    constructor(num1, num2) {
+        this.num1 = num1;
+        this.num2 = num2;
+    }
+    // function or method in opp to sum two nums 
+    sum() {
+        return this.num1 + this.num2;
+    }
+}
+// Instances 
+let s = new Sum(1, 2);
+class Calc {
+    num1;
+    num2;
+    age;
+    constructor(num1, num2, age) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.age = age;
+    }
+    // function or method in opp to sum two nums 
+    sum() {
+        return this.num1 + this.num2 + this.age;
+    }
+}
+let classResult = new Calc(1, 2, 3);
+// console.log(classResult.sum());
+//! short hand  
+class CalcShort {
+    num1;
+    num2;
+    age;
+    constructor(num1, num2, age) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.age = age;
+    }
+    // function or method in opp to sum two nums 
+    sum() {
+        return this.num1 + this.num2 + this.age;
+    }
+}
+export {};

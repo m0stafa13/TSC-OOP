@@ -56,4 +56,63 @@ let res = sum2({ n1: 2, n2: 2, n3: 2 })
 // return  void ==> void we put it when the function has end of logic  like function print thing tho something , function to sum two nums , function crate some thing and end then return back to the line that makes call to this function
 // return never ==> function return never cannot have a returnable end point (has no end point ) server fun, wile(true) {} , in js we have throw Error is function return never =>it dose not stop when you throw Error the server will stop if you did not  handle it
 // return void > function has end point and return (undefined)
-// return never > function has no end pint it will working all times 
+// return never > function has no end pint it will working all times  
+//!class
+class Sum {
+    public num1: number
+    public num2: number
+    constructor(num1: number, num2: number) {
+        this.num1 = num1
+        this.num2 = num2
+    }
+    // function or method in opp to sum two nums 
+    sum(): number {
+        return this.num1 + this.num2
+    }
+}
+// Instances 
+let s = new Sum(1, 2)
+// console.log(s.sum());
+// !Access modifiers
+
+//public ===> + Accessible from anywhere in the application
+//private===> - Accessible strictly inside the declaring class itself
+//protected=> # Accessible within the same package and by subclasses (even across different packages).
+//!interface
+// crate main shape to the class 
+interface ICalc {
+    num1: number,
+    num2: number,
+    sum: Function
+}
+// REOPEN  == > add new thing to interface 
+interface ICalc {
+    age: number
+}
+
+class Calc implements ICalc {
+    public num1
+    public num2
+    public age
+
+    constructor(num1: number, num2: number, age: number) {
+        this.num1 = num1
+        this.num2 = num2
+        this.age = age
+    }
+    // function or method in opp to sum two nums 
+    sum() {
+        return this.num1 + this.num2 + this.age
+    }
+}
+let classResult = new Calc(1, 2, 3)
+// console.log(classResult.sum());
+//! short hand  
+class CalcShort implements ICalc {
+    constructor(public num1: number, public num2: number, public age: number) {
+    }
+    // function or method in opp to sum two nums 
+    sum() {
+        return this.num1 + this.num2 + this.age
+    }
+}
