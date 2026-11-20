@@ -160,3 +160,22 @@ class Dog extends Animal {
 }
 let dog = new Dog("max")
 // console.log(dog.eat());
+//!Polymorphism
+// i parent class i have method in child class i can user same method to make diff output ==>(overriding)
+class AAnimal {
+    makeSound() {
+        console.log("some sound");
+    }
+}
+class Dpg extends AAnimal {
+    // override 
+    makeSound(): void {
+        console.log("Dog sound");
+    }
+}
+class Cat extends AAnimal {
+    // override
+    makeSound(): void {
+        console.log("Cat sound");
+    }
+}
