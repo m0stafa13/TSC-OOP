@@ -179,3 +179,20 @@ class Cat extends AAnimal {
         console.log("Cat sound");
     }
 }
+// Abstraction 
+// the database Repo is class we use it to  make connection with db from only one place  and we will use it in all request to the db from and service file 
+class DatabaseRepo {
+    // model 
+    crate() {
+        // this.model.crate(body)
+        return "done"
+    }
+    findOne() {
+        // this.model.findOne({_id:id}) <= this function from mongoose 
+        return "done"
+    }
+    findAll() {
+        //this.model.find()
+        return "done"
+    }
+}
