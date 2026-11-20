@@ -87,7 +87,7 @@ class CalcShort {
         return this.num1 + this.num2 + this.age;
     }
 }
-//Encapsulation
+//!Encapsulation
 class BankAccount {
     // cannot access balance from any place just from this class only
     balance;
@@ -108,6 +108,28 @@ class BankAccount {
 }
 let bank = new BankAccount(100);
 // in bank i can not access balance > it's private var
-// just i can access it using getter and setter functions 
-console.log(bank.getBalance());
+// just i can access it using getter and setter functions
+// console.log(bank.getBalance());
+//!Inheritance
+class Animal {
+    name;
+    constructor(name) {
+        this.name = name;
+    }
+    eat() {
+        console.log(`${this.name} is Eating`);
+    }
+}
+class Dog extends Animal {
+    constructor(name) {
+        // if i did't use constructor the child class will send data to parent 
+        // if i used constructor i should user super(send data to child constructor) 
+        super(name);
+    }
+    sound() {
+        console.log("Woof");
+    }
+}
+let dog = new Dog("max");
 export {};
+// console.log(dog.eat());
