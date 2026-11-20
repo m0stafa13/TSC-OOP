@@ -42,3 +42,18 @@ let userObj: userType = {
     isVerified: false,
     name: "mo"
 }
+//! function 
+function sum(n1: number, n2: number, n3: number): number {
+    return (n2 + n1) * n3
+}
+let result = sum(1, 2, 3)
+// console.log(result);
+// function with object parameter 
+function sum2({ n1, n2, n3 }: { n1: number, n2: number, n3: number }): number {
+    return n1 + n2 + n3
+}
+let res = sum2({ n1: 2, n2: 2, n3: 2 })
+// return  void ==> void we put it when the function has end of logic  like function print thing tho something , function to sum two nums , function crate some thing and end then return back to the line that makes call to this function
+// return never ==> function return never cannot have a returnable end point (has no end point ) server fun, wile(true) {} , in js we have throw Error is function return never =>it dose not stop when you throw Error the server will stop if you did not  handle it
+// return void > function has end point and return (undefined)
+// return never > function has no end pint it will working all times 
