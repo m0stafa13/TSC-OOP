@@ -196,3 +196,42 @@ class DatabaseRepo {
         return "done"
     }
 }
+//!Association two classes has relation 
+
+class Student {
+    constructor(public name: string) { }
+}
+// Teacher class 
+class Teacher {
+    constructor(public name: string) {
+    }
+    teaches(student: Student) {
+        console.log(`${this.name} teaches ${student.name}`);
+    }
+}
+let student = new Student("mohamed")
+let teacher = new Teacher("Mostafa")
+// console.log(teacher.teaches(student));
+//* in association if i deleted some of classes another class has no effect
+//* both objects can exist independently
+//!Composition strong HAS-A  relationship 
+// house and rooms 
+class Room {
+    constructor(public name: string) { }
+}
+class House {
+    private rooms: Room[]
+    constructor() {
+        this.rooms = [
+            new Room("BedRoom"),
+            new Room("Kitchen")
+        ]
+    }
+}
+// if i deleted some class another class will be no working
+// House created using room class
+//!Generic ==> datatype will be send from arg
+function h<T>(n1: T, n2: T) {
+    console.log(n1, n2);
+}
+h(3, 3)// to arg must be same datatype if dif will be ts error
